@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #000000;
+            text-align: center;
+            overflow-x: hidden;
+            background-color: #f1f1f1; /* Light gray background */
+            height: 100vh; /* Ensures full viewport height */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;  /* Ensures header is above background */
+        }
+
+        .title-container {
+            text-align: left;
+            color: #000000;
+        }
+
+        .title-container h1 {
+            font-size: 4rem;  /* Adjust as needed */
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .title-container h2 {
+            font-size: 2rem;  /* Adjust as needed */
+            font-weight: 400;
+            margin: 0;
+            color: #666666;
+        }
+
+        .portal-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            flex-wrap: wrap;
+            z-index: 1;  /* Ensures portals are above the background */
+        }
+
+        .portal {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 200px;
+            background-color: #cccccc;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .portal h2 {
+            font-size: 1rem;
+            color: #606060;
+            background: none;
+            margin: 0;
+            padding: 5px;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .portal:hover {
+            transform: scale(1.1);
+        }
+
+        .circle-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: gray;
+            background-image: url('images/pfpic.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-left: 10px;
+        }
+
+        .contact-link {
+            font-size: 1.2rem; /* Made slightly larger */
+            color: #000000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .contact-link span {
+            margin-right: 10px; /* Add space between the text and the image */
+        }
+
+        /* Back arrow styling */
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5rem;
+            color: #000000;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="title-container">
+            <h1>Engineering Portfolio</h1>
+            <h2>Baurice Kovatchev</h2>
+        </div>
+        <a href="contact.html" class="contact-link">
+            <span>Bio & Contact</span>
+            <div class="circle-image"></div>
+        </a>
+    </div>
+    <div class="portal-container">
+        <a href="personal-projects.html" class="portal" style="background-image: url('images/personalprojectsimages/IMG_4493.JPG');">
+            <h2>Personal Projects</h2>
+        </a>
+        <a href="car-team.html" class="portal" style="background-image: url('images/carteamimages/IMG_5799.JPG');">
+            <h2>Car Team</h2>
+        </a>
+        <a href="class-projects.html" class="portal" style="background-image: url('images/classprojectsimages/IMG_0806.JPG');">
+            <h2>Class Projects</h2>
+        </a>
+        <a href="shed.html" class="portal" style="background-image: url('images/shedimages/IMG_4505.JPG');">
+            <h2>Shed</h2>
+        </a>
+        <a href="cad.html" class="portal" style="background-image: url('images/cadimages/IMG_3085.PNG');">
+            <h2>CAD</h2>
+        </a>
+    </div>
+</body>
+</html>

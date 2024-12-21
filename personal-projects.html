@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Team</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1; /* Light gray background */
+            color: #000000;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .title-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .title-container h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .back-button {
+            font-size: 1.5rem;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .contact-link {
+            font-size: 1.2rem;
+            color: #000000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-link span {
+            margin-right: 10px; /* Add space between the text and the image */
+        }
+
+        .circle-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: gray;
+            background-image: url('images/pfpic.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            margin-top: 20px; /* Adjust spacing below the header */
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .images-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .images-scroll-container img {
+            width: 300px; /* Set images to 400px width */
+            height: 300px; /* Set images to 400px height */
+            object-fit: cover;
+            flex-shrink: 0; /* Prevent images from shrinking */
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <a href="Portfolio_Code.html" class="back-button">&larr; Back</a>
+        <div class="title-container">
+            <h1>Personal Projects</h1>
+        </div>
+        <a href="contact.html" class="contact-link">
+            <span>Bio & Contact</span>
+            <div class="circle-image"></div>
+        </a>
+    </header>
+
+    <main class="content">
+        <div class="section-title">
+            <h2>Projects</h2>
+        </div>
+
+        <div class="images-scroll-container" id="scroll-container">
+            <img src="images/personalprojectsimages/IMG_2427.JPG" alt="Image 1">
+            <img src="images/personalprojectsimages/IMG_2425.JPG" alt="Image 2">
+            <img src="images/personalprojectsimages/IMG_5751.JPG" alt="Image 3">
+            <img src="images/personalprojectsimages/IMG_4493.JPG" alt="Image 4">
+            <img src="images/personalprojectsimages/IMG_5269.JPG" alt="Image 5">
+            <img src="images/personalprojectsimages/IMG_6552.JPG" alt="Image 6">
+            <img src="images/personalprojectsimages/IMG_6553.JPG" alt="Image 7">
+        </div>
+    </main>
+
+    <script>
+        // Scroll to the middle of the images container on page load
+        window.onload = () => {
+            const container = document.getElementById('scroll-container');
+            container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
+        };
+    </script>
+</body>
+</html>
